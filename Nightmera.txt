@@ -1,0 +1,3 @@
+if game.PlaceId == 1 then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Tunguyen1441/Toilatu/refs/heads/main/BloxFruit"))()
+end
