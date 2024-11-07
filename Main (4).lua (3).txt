@@ -1652,7 +1652,7 @@ LPH_JIT_MAX(function()
 	end)
 end)()
 
-local Section = Tabs.Main:AddSection("Main Setup Setting Farm")
+local Section = Tabs.Main:AddSection("Setting Farm")
 
 local FASTAT = Tabs.Main:AddToggle("Fast_Attack", {Title = "Fast Attack", Default = true })
 FASTAT:OnChanged(function(value)
@@ -1988,7 +1988,7 @@ local function ChangeModeFastAttack(SelectFastAttackMode)
 	elseif SelectFastAttackMode == "Fast Attack" then
 		FireCooldown = 0.07
 	elseif SelectFastAttackMode == "Super Fast Attack" then
-		FireCooldown = 0.00
+		FireCooldown = 0.02
 	end
 end
 
