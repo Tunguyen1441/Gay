@@ -2462,12 +2462,7 @@ spawn(function()
     end
 end
 )
---/Farm Sea 2
-local Toggle = Tabs.Main:AddToggle("Auto Rengoku", { Title = "Auto Đánh Nhà Máy | Sea 2", Default = false })
-Toggle:OnChanged(function(Value)
-    _G.Auto_Nha_Dien = Value
-    StopTween(_G.Auto_Nha_Dien)
-end)            
+
 
 spawn(function()
     while wait() do
@@ -2956,7 +2951,7 @@ spawn(function()
             end
         end
     end)       
-local Toggle = Tabs.item:AddToggle("Auto Saber", { Title = "Auto Kiếm Saber | Sea 1", Default = false })
+local Toggle = Tabs.item:AddToggle("Auto Saber", { Title = "Auto Shaber", Default = false })
 Toggle:OnChanged(function(Value)
     _G.Cuttay = Value
     StopTween(_G.Cuttay)
@@ -3067,7 +3062,7 @@ spawn(function()
     end)
 
 
-local Toggle = Tabs.item:AddToggle("Auto Pole", { Title = "Auto Kiếm Pole | Sea 1", Default = false })
+local Toggle = Tabs.item:AddToggle("Auto Pole", { Title = "Auto Pole Sword", Default = false })
 Toggle:OnChanged(function(LuoiQuaAeOi)
     _G.Khi_Dot_Len_Dien = LuoiQuaAeOi
     StopTween(_G.Khi_Dot_Len_Dien)
@@ -3112,7 +3107,13 @@ end)
         end
     end)   
     
-local Toggle = Tabs.item:AddToggle("Auto Rengoku", { Title = "Auto Kiếm Rengoku | Sea 2", Default = false })
+    local Toggle = Tabs.item:AddToggle("Auto Rengoku", { Title = "Farm Factory", Default = false })
+Toggle:OnChanged(function(Value)
+    _G.Auto_Nha_Dien = Value
+    StopTween(_G.Auto_Nha_Dien)
+end)            
+    
+local Toggle = Tabs.item:AddToggle("Auto Rengoku", { Title = "Auto Rengoku", Default = false })
 Toggle:OnChanged(function(Value)
     _G.Kiem_Lua = Value
     StopTween(_G.Kiem_Lua)
