@@ -1368,25 +1368,17 @@ function GetDistance(q)
 end
 
 ---------------SettingTab
-Tabs.infor:AddSection("Nhóm Discord Của Tớ ~")
 Tabs.infor:AddButton({
-        Title = "Tham Gia Nhóm | Turbo Lite Và Các Bạn",
-        Description = "https://discord.gg/zKA8VNHzME | Sao Chép Link",
+        Title = "Discord ",
+        Description = "Jion Discord nha mấy ní",
         Callback = function()
-        setclipboard("https://discord.gg/zKA8VNHzME | Sao Chép Link")
+        setclipboard("https://discord.gg/qVjcU7sC")
         end
     })
-    Tabs.infor:AddSection("Kênh YouTube Của Tớ ~")
-Tabs.infor:AddButton({
-        Title = "Đăng Ký Kênh Của Tớ Với Nha :>>",
-        Description = "https://youtube.com/@turboxlite | Turbo Lite",
-        Callback = function()
-        setclipboard("YouTube: Turbo Lite")
-        end
-    })
+
 ---------------TabStatus
 local BuonNaoDauAiThau = Tabs.Home:AddParagraph({
-    Title = "Trạng Thái: Quái Vật Katakuri",
+    Title = "Status : Katakuri",
     Content = ""
 })
 
@@ -1396,13 +1388,13 @@ function()
 		pcall(  
 		function()
 			if string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 88 then
-				BuonNaoDauAiThau:SetDesc("Quát Vật Còn Lại: "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41).."")
+				BuonNaoDauAiThau:SetDesc("Killer : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41).."")
 			elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 87 then
 				BuonNaoDauAiThau:SetDesc("Kill : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,40).."")
 			elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 86 then
 				BuonNaoDauAiThau:SetDesc("Kill : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39).." ")
 			else
-				BuonNaoDauAiThau:SetDesc("Quát Vật Katakuri Đang Spwm")
+				BuonNaoDauAiThau:SetDesc("🟢 : Spawn")
 			end
 		end
 		)
@@ -1410,7 +1402,7 @@ function()
 end
 )
 local EmOiDungKhoc = Tabs.Home:AddParagraph({
-        Title = "Trạng Thái: Server Full Moon",
+        Title = "Status : Full Moon",
         Content = ""
     })
     spawn(
@@ -1437,7 +1429,7 @@ end
 end
 )
 local ConMeMayThangWidiBuCacAnhDi = Tabs.Home:AddParagraph({
-    Title = "Trạng Thái: Boss Elite Hunter",
+    Title = "Status : Eliter",
     Content = ""
 })
 spawn(
@@ -1451,9 +1443,9 @@ spawn(
             or game:GetService("Workspace").Enemies:FindFirstChild("Diablo") 
             or game:GetService("Workspace").Enemies:FindFirstChild("Deandre") 
             or game:GetService("Workspace").Enemies:FindFirstChild("Urban") then
-                ConMeMayThangWidiBuCacAnhDi:SetDesc("Đang Có Boss")	
+                ConMeMayThangWidiBuCacAnhDi:SetDesc("🟢 : Spawn")	
             else
-                ConMeMayThangWidiBuCacAnhDi:SetDesc("Không Có Boss")	
+                ConMeMayThangWidiBuCacAnhDi:SetDesc("🔴 : Not spawn")	
             end
         end
         )
@@ -1461,16 +1453,16 @@ spawn(
 end
 )
 local DaoNaoCac = Tabs.Home:AddParagraph({
-    Title = "Trạng Thái: Đảo Kì Bí",
+    Title = "Status Mirage",
     Content = ""
 })
 
 local function updateMirageStatus()
     local mirageIsland = game.Workspace._WorldOrigin.Locations:FindFirstChild('Đảo Kì Bí')
     if mirageIsland then
-        DaoNaoCac:SetDesc('Trạng Thái: Đang Có Đảo')
+        DaoNaoCac:SetDesc('🟢 : Spawn')
     else
-        DaoNaoCac:SetDesc('Trạng Thái: Không Có Đảo')
+        DaoNaoCac:SetDesc('🔴 : Not Spawn')
     end
 end
 
@@ -3903,16 +3895,16 @@ HopLowServer()
 })
 -------Tab Race-----
 local DaoNaoCac = Tabs.meo:AddParagraph({
-    Title = "Trạng Thái Đảo Bí Ẩn",
+    Title = "Status : Mirage",
     Content = ""
 })
 
 local function updateMirageStatus()
     local mirageIsland = game.Workspace._WorldOrigin.Locations:FindFirstChild('Đảo Kì Bí')
     if mirageIsland then
-        DaoNaoCac:SetDesc('Trạng Thái 🟢: Đang Có Đảo')
+        DaoNaoCac:SetDesc('🟢 : Spawn')
     else
-        DaoNaoCac:SetDesc('Trạng Thái 🔴: Không Có Đảo')
+        DaoNaoCac:SetDesc('🔴 : not spawn')
     end
 end
 
