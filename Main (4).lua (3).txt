@@ -90,7 +90,7 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 
 local Window = Fluent:CreateWindow({
     Title = "Wave Hub",
-    SubTitle = "",
+    SubTitle = "Free",
     TabWidth = 110,
     Size = UDim2.fromOffset(480, 320),
     Acrylic = false,
@@ -109,6 +109,7 @@ local Tabs = {
     an = Window:AddTab({ Title = "Misc", Icon = "" }),
     meo = Window:AddTab({ Title = "Migare", Icon = "" }),
     Race = Window:AddTab({ Title = "Race V4", Icon = "" }),
+    Tace = Window:AddTab({ Title = "ĐF-Fuits", Icon = "" }),
     Raid = Window:AddTab({ Title = "Dugeon", Icon = "" }),
 }
 
@@ -1988,7 +1989,7 @@ local function ChangeModeFastAttack(SelectFastAttackMode)
 	elseif SelectFastAttackMode == "Fast Attack" then
 		FireCooldown = 0.07
 	elseif SelectFastAttackMode == "Super Fast Attack" then
-		FireCooldown = 0.01
+		FireCooldown = 0.02
 	end
 end
 
@@ -3132,7 +3133,7 @@ end)
         end
     end)
 
-local Toggle = Tabs.item:AddToggle("Auto Ectoplasm", { Title = "Auto Mua 3 Kiếm Zero | Sea 2", Default = false })
+local Toggle = Tabs.item:AddToggle("Auto Ectoplasm", { Title = "Auto Buy 3 Swords Zero | Sea 2", Default = false })
 Toggle:OnChanged(function(KiemNhuLon)
     NgayXuaNgayXuaCoNguoiTenLaAnDepTraiDaTaiDepTraNoiTiengTiktokNoiYoutubeCungNoiHayKiemMotNguoiDangCapHonAnDepZaiDiNheCacBanHuhuHu = KiemNhuLon
 end)      
@@ -3161,7 +3162,7 @@ spawn(function()
     end
 end)
 --//Farm Sea 3 BABABABABABAABABABABABABABABABABA
-local Toggle = Tabs.item:AddToggle("auto Kill", { Title = "Auto Làm Holy Torch | Sea 3",  Default = false })
+local Toggle = Tabs.item:AddToggle("auto Kill", { Title = "Auto do Holy Torch",  Default = false })
 Toggle:OnChanged(function(Value)
 _G.Gan_Duoc_Cho_Khi = Value
 StopTween(_G.Gan_Duoc_Cho_Khi)
@@ -3212,7 +3213,7 @@ spawn(function()
     end
 end)
 
-local Toggle = Tabs.item:AddToggle("auto Change", { Title = "Đổi Haki Aura | All Sea", Default = false })
+local Toggle = Tabs.item:AddToggle("auto Change", { Title = "Random Haki Aura", Default = false })
 Toggle:OnChanged(function(Value)
 Gan_Haki_Lon = Value
 StopTween(Gan_Haki_Lon)
@@ -3249,7 +3250,7 @@ spawn(function()
     end
 end)
 
-local Toggle = Tabs.item:AddToggle("auto Kill", { Title = "Auto Đánh Rip_Indra | Sea 3", Description = "", Default = false })
+local Toggle = Tabs.item:AddToggle("auto Kill", { Title = "Farm Rip_Indra", Description = "", Default = false })
 Toggle:OnChanged(function(Value)
 _G.ThangDauMatLon = Value
 StopTween(_G.ThangDauMatLon)
@@ -3288,7 +3289,7 @@ end)
         end)
     end)
 
-local Toggle = Tabs.item:AddToggle("auto Kill", { Title = "Auto Kiếm Tushita | Sea 3", Default = false })
+local Toggle = Tabs.item:AddToggle("auto Kill", { Title = "Auto Tushita", Default = false })
 Toggle:OnChanged(function(Value)
 _G.Long_Ma_Bac_Giang = Value
 StopTween(_G.Long_Ma_Bac_Giang)
@@ -3338,7 +3339,7 @@ end)
         end
     end)
 
-local Toggle = Tabs.item:AddToggle("Auto Eliter Hunter", { Title = "Auto Đánh Eliter Hunter | Sea 3", Default = false })
+local Toggle = Tabs.item:AddToggle("Auto Eliter Hunter", { Title = "Farm Eliter Hunter", Default = false })
 Toggle:OnChanged(function(Value)
     _G.Eli_Ngu = Value
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
@@ -3390,7 +3391,7 @@ spawn(function()
 		end
 	end)
 	
-local Toggle = Tabs.item:AddToggle("auto Change", { Title = "Auto Đánh Dough King | Sea 3", Description = "", Default = false })
+local Toggle = Tabs.item:AddToggle("auto Change", { Title = "Farm Dough King", Description = "làm hết nhá mấy ní", Default = false })
 Toggle:OnChanged(function(Value)
 _G.Katakuri_V2_Nhu_lon = Value
 StopTween(_G.Katakuri_V2_Nhu_lon)
@@ -3600,16 +3601,16 @@ Tabs.tele:AddButton({
         Callback = function()
             Window:Dialog({
                 Title = "Warn !",
-                Content = "Có Qua Sea 2 Hay Không?",
+                Content = "Sea 2",
                 Buttons = {
                     {
-                        Title = "Có",
+                        Title = "Yes",
                         Callback = function()
                          game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
                         end
                     },
                     {
-                        Title = "Không",
+                        Title = "No",
                         Callback = function()
                             print("")
                         end
@@ -3625,16 +3626,16 @@ Tabs.tele:AddButton({
         Callback = function()
             Window:Dialog({
                 Title = "Warn !",
-                Content = "Có Qua Sea 3 Hay Không?",
+                Content = "Sea 3",
                 Buttons = {
                     {
-                        Title = "Có",
+                        Title = "Yes",
                         Callback = function()
                          game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
                         end
                     },
                     {
-                        Title = "Không",
+                        Title = "No",
                         Callback = function()
                             print("Trash")
                         end
@@ -3648,7 +3649,7 @@ local Mastery = Tabs.tele:AddSection("Dịch Chuyển Đảo")
 
 if AnDepZai1 then
 local Dropdown1 = Tabs.tele:AddDropdown("DropdownFarm", {
-    Title = "Chọn Đảo | Sea 1",
+    Title = "Slect Islands",
     Values = {"WindMill", "Marine","Middle Town", "Jungle", "Pirates Village", "Desert", "Snow Island", "MarineFord", "Colosseum", "Sky Island 1", "Sky Island 2", "Sky Island 3", "Prison", "Magma Village", "Under Water Island","Fountain City", "Shank Room"},
     Multi = false,
 })
@@ -3661,7 +3662,7 @@ end
 
 if AnDepZai2 then
 local Dropdown2 = Tabs.tele:AddDropdown("DropdownFarm", {
-    Title = "Chọn Đảo | Sea 2",
+    Title = "Slect Islands",
     Values = {"The Cafe", "Frist Spot", "Dark Area", "Flamingo Mansion", "Flamingo Room", "Green Zone", "Factory", "Colossuim", "Zombie Island", "Two Snow Mountain", "Punk Hazard", "Cursed Ship", "Ice Castle", "Forgotten Island", "Ussop Island"},
     Multi = false,
 })
@@ -3674,7 +3675,7 @@ end
 
 if AnDepZai3 then
 local Dropdown3 = Tabs.tele:AddDropdown("DropdownFarm3", {
-    Title = "Chọn Đảo | Sea 3",
+    Title = "Slect Islands",
     Values = {"Mansion","Port Town","Great Tree","Castle On The Sea","Hydra Island","Haunted Castle","Ice Cream Island","Peanut Island","Cake Island","Cocoa Island","Candy Island","Tiki Outpost"},
     Multi = false,
 })
@@ -3685,7 +3686,7 @@ _G.SelectIsland = Value
 end)
 end
 
-local Toggle = Tabs.tele:AddToggle("Dịch Chuyển Đến Đảo", { Title = "Dịch Chuyển Đến Đảo", Default = false })
+local Toggle = Tabs.tele:AddToggle("Dịch Chuyển Đến Đảo", { Title = "Teleport", Default = false })
 Toggle:OnChanged(function(Value)
     _G.BayDao = Value     
          if _G.BayDao == true then
