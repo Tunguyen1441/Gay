@@ -2425,12 +2425,7 @@ Toggle:OnChanged(function(Value)
     _G.AutoFarm = Value
     StopTween(_G.AutoFarm)
 end)
-local Meo = Tabs.Main:AddSection("Đánh Hải Tặc Và Nhà Máy")
-local Toggle = Tabs.Main:AddToggle("Auto Eliter Hunter", { Title = "Auto Đánh Hải Tặc | Sea 3", Default = false })
-Toggle:OnChanged(function(Value)
-    _G.RaidPirate = Value
- StopTween(_G.RaidPirate)
-end)    	
+
 	
 spawn(function()
     while wait() do
@@ -2539,10 +2534,7 @@ spawn(function()
             end
         end)
     end)
-local Toggle = Tabs.Main:AddToggle("Random Bone", { Title = "Random Xương", Default = false })
-Toggle:OnChanged(function(WinDyLaConCacTao)
-    _G.RandomBone = WinDyLaConCacTao
-end)
+
 
 spawn(function()
    while wait() do
@@ -3398,6 +3390,12 @@ end)
             end
         end
     end)
+    
+    local Toggle = Tabs.item:AddToggle("Auto Eliter Hunter", { Title = "Farm Raid Pirate", Default = false })
+Toggle:OnChanged(function(Value)
+    _G.RaidPirate = Value
+ StopTween(_G.RaidPirate)
+end)    	
 
 local Toggle = Tabs.item:AddToggle("Auto Eliter Hunter", { Title = "Auto Đánh Eliter Hunter | Sea 3", Default = false })
 Toggle:OnChanged(function(Value)
@@ -4891,6 +4889,11 @@ Tabs.Melee:AddButton({
 local Toggle = Tabs.Melee:AddToggle("Random Trái Blox", { Title = "Random Fruit", Default = false })
 Toggle:OnChanged(function(Value)
     _G.Random_Auto = Value
+end)
+
+local Toggle = Tabs.Melee:AddToggle("Random Bone", { Title = "Random Bone", Default = false })
+Toggle:OnChanged(function(WinDyLaConCacTao)
+    _G.RandomBone = WinDyLaConCacTao
 end)
 
 repeat
