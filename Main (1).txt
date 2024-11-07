@@ -102,14 +102,14 @@ local Tabs = {
     infor = Window:AddTab({ Title = "Discord", Icon = "" }),
     Home = Window:AddTab({ Title = "Status", Icon = "" }),
     Main = Window:AddTab({ Title = "Farming", Icon = "" }),
-    item = Window:AddTab({ Title = "Auto Item", Icon = "" }),
-    C = Window:AddTab({ Title = "Kill Player", Icon = "" }),
-    tele = Window:AddTab({ Title = "Dịch Chuyển", Icon = "" }),
-    an = Window:AddTab({ Title = "Config Misc", Icon = "" }),
-    meo = Window:AddTab({ Title = "Đảo Bí Ẩn", Icon = "" }),
-    Race = Window:AddTab({ Title = "Trial Tộc V4", Icon = "" }),
+    C = Window:AddTab({ Title = "Player", Icon = "" }),
+    item = Window:AddTab({ Title = "item", Icon = "" }),
+    tele = Window:AddTab({ Title = "Teleport", Icon = "" }),
+    an = Window:AddTab({ Title = "Misc", Icon = "" }),
+    meo = Window:AddTab({ Title = "Mirage", Icon = "" }),
+    Race = Window:AddTab({ Title = "Race V4", Icon = "" }),
     Raid = Window:AddTab({ Title = "Raid Fruit", Icon = "" }),
-    Melee = Window:AddTab({ Title = "Cửa Hàng", Icon = "" })
+    Melee = Window:AddTab({ Title = "Shop", Icon = "" }),
 }
 
 local Options = Fluent.Options
@@ -2067,7 +2067,7 @@ SelectedFastAttackModes:OnChanged(function(value)
 	ChangeModeFastAttack(SelectFastAttackMode)	
 end)
 local Dropdown = Tabs.Main:AddDropdown("DropdownFarm", {
-    Title = "Chọn Farm",
+    Title = "Slect Farm",
     Values = {"Farm Level", "Farm Bone", "Farm Katakuri"},
     Multi = false,
 })
@@ -2369,7 +2369,7 @@ spawn(function()
 
 ------//Select Weapon
 local Dropdown = Tabs.Main:AddDropdown("DropdownFarm", {
-    Title = "Chọn Vũ Khí",
+    Title = "Slect Item Farm",
     Values = {"Melee", "Sword", "Gun", "Fruit"},
     Multi = false,
 })
@@ -2528,11 +2528,7 @@ spawn(function()
         end
     end)
 end)
-local ConCac = Tabs.Main:AddSection("Main Auto Random")
-local Toggle = Tabs.Main:AddToggle("Random Trái Blox", { Title = "Random Fruit", Default = false })
-Toggle:OnChanged(function(Value)
-    _G.Random_Auto = Value
-end)
+
 
 spawn(function()
         pcall(function()
@@ -4891,6 +4887,12 @@ Tabs.Melee:AddButton({
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(a))
     end    
 })
+
+local Toggle = Tabs.Melee:AddToggle("Random Trái Blox", { Title = "Random Fruit", Default = false })
+Toggle:OnChanged(function(Value)
+    _G.Random_Auto = Value
+end)
+
 repeat
     wait()
 until game:IsLoaded()
