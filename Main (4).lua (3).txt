@@ -2465,11 +2465,7 @@ spawn(function()
         end
     end)
 end)
-local ConCac = Tabs.Main:AddSection("Main Auto Random")
-local Toggle = Tabs.Main:AddToggle("Random Trái Blox", { Title = "Random Fruit", Default = false })
-Toggle:OnChanged(function(Value)
-    _G.Random_Auto = Value
-end)
+
 
 spawn(function()
         pcall(function()
@@ -2480,10 +2476,7 @@ spawn(function()
             end
         end)
     end)
-local Toggle = Tabs.Main:AddToggle("Random Bone", { Title = "Random Xương", Default = false })
-Toggle:OnChanged(function(WinDyLaConCacTao)
-    _G.RandomBone = WinDyLaConCacTao
-end)
+
 
 spawn(function()
    while wait() do
@@ -4761,7 +4754,7 @@ spawn(function()
 end)
 -----Shop Melee-----
 local Dropdown = Tabs.Melee:AddDropdown("DropdownMelee", {
-    Title = "Mua Melee",
+    Title = "Slect Melee",
     Values = {"Black Leg", "Electro", "Fishman Karate", "Dragon Claw", "Super Human", "Death Step", "Sharkman Karate", "Electric Claw", "Dragon Talon", "God Human","Sanguine Art"},
     Multi = false,
 })
@@ -4828,6 +4821,17 @@ Tabs.Melee:AddButton({
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(a))
     end    
 })
+
+local Toggle = Tabs.Melee:AddToggle("Random Bone", { Title = "Random Bone", Default = false })
+Toggle:OnChanged(function(WinDyLaConCacTao)
+    _G.RandomBone = WinDyLaConCacTao
+end)
+
+local Toggle = Tabs.Melee:AddToggle("Random Trái Blox", { Title = "Random Fruit", Default = false })
+Toggle:OnChanged(function(Value)
+    _G.Random_Auto = Value
+end)
+
 repeat
     wait()
 until game:IsLoaded()
