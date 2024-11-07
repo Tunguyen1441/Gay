@@ -1988,7 +1988,7 @@ local function ChangeModeFastAttack(SelectFastAttackMode)
 	elseif SelectFastAttackMode == "Fast Attack" then
 		FireCooldown = 0.07
 	elseif SelectFastAttackMode == "Super Fast Attack" then
-		FireCooldown = 0.02
+		FireCooldown = 0.01
 	end
 end
 
@@ -2362,12 +2362,7 @@ Toggle:OnChanged(function(Value)
     _G.AutoFarm = Value
     StopTween(_G.AutoFarm)
 end)
-local Meo = Tabs.Main:AddSection("Đánh Hải Tặc Và Nhà Máy")
-local Toggle = Tabs.Main:AddToggle("Auto Eliter Hunter", { Title = "Auto Đánh Hải Tặc | Sea 3", Default = false })
-Toggle:OnChanged(function(Value)
-    _G.RaidPirate = Value
- StopTween(_G.RaidPirate)
-end)    	
+
 	
 spawn(function()
     while wait() do
@@ -2405,11 +2400,7 @@ spawn(function()
 end
 )
 --/Farm Sea 2
-local Toggle = Tabs.Main:AddToggle("Auto Rengoku", { Title = "Auto Đánh Nhà Máy | Sea 2", Default = false })
-Toggle:OnChanged(function(Value)
-    _G.Auto_Nha_Dien = Value
-    StopTween(_G.Auto_Nha_Dien)
-end)            
+
 
 spawn(function()
     while wait() do
@@ -2497,7 +2488,7 @@ if AnDepZai3 then
 ----Tween Nay No Se Check Distance Va Chon Diem De Tele Nhanh Nhat Nhe , Minh Thi Ko Ranh Nen Se Skid Cua May Hub Khac Va Gan Chuc Nang Minh Tu Lam
 local Hiz = Tabs.item:AddSection("Farm Nguyên Liệu")
 local Dropdown = Tabs.item:AddDropdown("DropdownFarm", {
-    Title = "Nguyên Liệu | Sea 3",
+    Title = "Farm Ingredient",
     Values = {"Cacao", "Dragon Scale", "Leather"},
     Multi = false,
 })
@@ -2853,14 +2844,28 @@ spawn(
     end
 end
 )
+
                                     
-local Toggle = Tabs.item:AddToggle("Start Farm", { Title = "Bắt Đầu Farm", Description = "", Default = false })
+local Toggle = Tabs.item:AddToggle("Start Farm", { Title = "Star Farm", Description = "Bắt đầu fadm", Default = false })
 Toggle:OnChanged(function(Value)
     StartFarm = Value
     StopTween(StartFarm)
 end)
-local Cuti = Tabs.item:AddSection("Farm Boss Server")
-local Toggle = Tabs.item:AddToggle("auto Change", { Title = "Auto Soul Reaper | Sea 3", Description = "", Default = false })
+local Cuti = Tabs.item:AddSection("Farm eliter")
+
+local Toggle = Tabs.item:AddToggle("Auto Eliter Hunter", { Title = "Auto Farm Pirate", Default = false })
+Toggle:OnChanged(function(Value)
+    _G.RaidPirate = Value
+ StopTween(_G.RaidPirate)
+end)    	
+
+local Toggle = Tabs.item:AddToggle("Auto Rengoku", { Title = "Auto Farm Factory", Default = false })
+Toggle:OnChanged(function(Value)
+    _G.Auto_Nha_Dien = Value
+    StopTween(_G.Auto_Nha_Dien)
+end)            
+
+local Toggle = Tabs.item:AddToggle("auto Change", { Title = "Auto Soul Reaper", Description = "", Default = false })
 Toggle:OnChanged(function(Value)
 _G.Buoi = Value
 StopTween(_G.Buoi)
@@ -2898,7 +2903,7 @@ spawn(function()
             end
         end
     end)       
-local Toggle = Tabs.item:AddToggle("Auto Saber", { Title = "Auto Kiếm Saber | Sea 1", Default = false })
+local Toggle = Tabs.item:AddToggle("Auto Saber", { Title = "Auto Shaber", Default = false })
 Toggle:OnChanged(function(Value)
     _G.Cuttay = Value
     StopTween(_G.Cuttay)
@@ -3009,7 +3014,7 @@ spawn(function()
     end)
 
 
-local Toggle = Tabs.item:AddToggle("Auto Pole", { Title = "Auto Kiếm Pole | Sea 1", Default = false })
+local Toggle = Tabs.item:AddToggle("Auto Pole", { Title = "Auto Pole", Default = false })
 Toggle:OnChanged(function(LuoiQuaAeOi)
     _G.Khi_Dot_Len_Dien = LuoiQuaAeOi
     StopTween(_G.Khi_Dot_Len_Dien)
@@ -3054,7 +3059,7 @@ end)
         end
     end)   
     
-local Toggle = Tabs.item:AddToggle("Auto Rengoku", { Title = "Auto Kiếm Rengoku | Sea 2", Default = false })
+local Toggle = Tabs.item:AddToggle("Auto Rengoku", { Title = "Auto Regoku", Default = false })
 Toggle:OnChanged(function(Value)
     _G.Kiem_Lua = Value
     StopTween(_G.Kiem_Lua)
@@ -3090,7 +3095,7 @@ spawn(function()
         end)
     end)
 
-local Toggle = Tabs.item:AddToggle("Auto Ectoplasm", { Title = "Auto item Ectoplasm | Sea 2", Default = false })
+local Toggle = Tabs.item:AddToggle("Auto Ectoplasm", { Title = "Auto Farm Ectoplasm", Default = false })
 Toggle:OnChanged(function(Value)
     Auto_Ki_Di = Value
     StopTween(Auto_Ki_Di)
