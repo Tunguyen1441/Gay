@@ -8,11 +8,6 @@ elseif game.PlaceId == 4442272183 then
 elseif game.PlaceId == 7449423635 then
     World3 = true
 end
-require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Script Update 8/11/24<Color=/>"):Display()
-wat(1)
-require(game.ReplicatedStorage.Notification).new("<Color=Bule>Script By Nguyễn Tứ<Color=/>"):Display()
-wait(1)
-require(game.ReplicatedStorage.Notification).new("<Color=Red>Script Wave x Andepzai<Color=/>"):Display()
 game.StarterGui:SetCore(
     "SendNotification",
     {
@@ -20,6 +15,12 @@ game.StarterGui:SetCore(
         Text = "Loading",
         Duration = 5
     })
+wait(0.3)
+require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Weacome Wave Hub<Color=/>"):Display()
+wat(0.2)
+require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Script By Nguyễn Tứ<Color=/>"):Display()
+wait(0.1)
+require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Script Wave x Andepzai<Color=/>"):Display()
 
 function PostWebhook(Url, message)
     local request = http_request or request or HttpPost or syn.request
