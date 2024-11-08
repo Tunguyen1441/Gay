@@ -8,6 +8,11 @@ elseif game.PlaceId == 4442272183 then
 elseif game.PlaceId == 7449423635 then
     World3 = true
 end
+require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Script Update 8/11/24<Color=/>"):Display()
+wat(1)
+require(game.ReplicatedStorage.Notification).new("<Color=Bule>Script By Nguyễn Tứ<Color=/>"):Display()
+wait(1)
+require(game.ReplicatedStorage.Notification).new("<Color=Red>Script Wave x Andepzai<Color=/>"):Display()
 game.StarterGui:SetCore(
     "SendNotification",
     {
@@ -1989,7 +1994,7 @@ local function ChangeModeFastAttack(SelectFastAttackMode)
 	elseif SelectFastAttackMode == "Fast Attack" then
 		FireCooldown = 0.07
 	elseif SelectFastAttackMode == "Super Attack" then
-		FireCooldown = 0.01
+		FireCooldown = 0.02
 	end
 end
 
@@ -2358,7 +2363,7 @@ task.spawn(function()
     end)          
 
           
-local Toggle = Tabs.Main:AddToggle("Start Auto Farm", { Title = "Start Auto Farm", Description = "Bắt Đầu Farm", Default = false })
+local Toggle = Tabs.Main:AddToggle("Start Auto Farm", { Title = "Start Auto Farm", Description = "bắt đầu farm", Default = false })
 Toggle:OnChanged(function(Value)
     _G.AutoFarm = Value
     StopTween(_G.AutoFarm)
@@ -2486,9 +2491,9 @@ end)
 if AnDepZai3 then
 
 ----Tween Nay No Se Check Distance Va Chon Diem De Tele Nhanh Nhat Nhe , Minh Thi Ko Ranh Nen Se Skid Cua May Hub Khac Va Gan Chuc Nang Minh Tu Lam
-local Hiz = Tabs.item:AddSection("Farm Ingredient")
+local Hiz = Tabs.item:AddSection("Farm item")
 local Dropdown = Tabs.item:AddDropdown("DropdownFarm", {
-    Title = "Farm Ingredient [ Sea 3 ]",
+    Title = "Farm Item [ Sea 3 ]",
     Values = {"Cacao", "Dragon Scale", "Leather"},
     Multi = false,
 })
@@ -2501,7 +2506,7 @@ end
 
 if AnDepZai2 then
 local Dropdown = Tabs.item:AddDropdown("DropdownFarm", {
-    Title = "Farm Ingredient [ Sea 2 ]",
+    Title = "Farm item [ Sea 2 ]",
     Values = {"Mystic Droplet", "Vampire Fang"},
     Multi = false,
 })
@@ -2845,7 +2850,7 @@ spawn(
 end
 )
                                     
-local Toggle = Tabs.item:AddToggle("Start Farm", { Title = "Bắt Đầu Farm", Description = "", Default = false })
+local Toggle = Tabs.item:AddToggle("Start Farm", { Title = "Start Farm", Description = "Bắt đầu Farm", Default = false })
 Toggle:OnChanged(function(Value)
     StartFarm = Value
     StopTween(StartFarm)
@@ -4757,7 +4762,7 @@ spawn(function()
 end)
 -----Shop Melee-----
 local Dropdown = Tabs.Melee:AddDropdown("DropdownMelee", {
-    Title = "Mua Melee",
+    Title = "Slect Melee",
     Values = {"Black Leg", "Electro", "Fishman Karate", "Dragon Claw", "Super Human", "Death Step", "Sharkman Karate", "Electric Claw", "Dragon Talon", "God Human","Sanguine Art"},
     Multi = false,
 })
