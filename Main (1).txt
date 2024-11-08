@@ -933,9 +933,9 @@ end
     function TP(Pos)
         Distance = (Pos.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
         if Distance < 300 then
-            Speed = 300
+            Speed = 350
         elseif Distance >= 1000 then
-            Speed = 300
+            Speed = 350
         end
         game:GetService("TweenService"):Create(
             game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
@@ -1044,12 +1044,12 @@ function AnDepZai(Pos)
         )
         wait()
     end
-    TweenSpeed = 350
+    TweenSpeed = 355
     function topos(aL)
         pcall(function()
                 if game:GetService("Players").LocalPlayer and game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid") and game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and  game:GetService("Players").LocalPlayer.Character.Humanoid.Health > 0 and game:GetService("Players").LocalPlayer.Character.HumanoidRootPart then
                     if not TweenSpeed then
-                        TweenSpeed = 350
+                        TweenSpeed = 355
                     end
                     DefualtY = aL.Y
                     TargetY = aL.Y
@@ -2486,9 +2486,9 @@ end)
 if AnDepZai3 then
 
 ----Tween Nay No Se Check Distance Va Chon Diem De Tele Nhanh Nhat Nhe , Minh Thi Ko Ranh Nen Se Skid Cua May Hub Khac Va Gan Chuc Nang Minh Tu Lam
-local Hiz = Tabs.item:AddSection("Farm Nguyên Liệu")
+local Hiz = Tabs.item:AddSection("Farm Ingredient")
 local Dropdown = Tabs.item:AddDropdown("DropdownFarm", {
-    Title = "Nguyên Liệu | Sea 3",
+    Title = "Farm Ingredient [ Sea 3 ]",
     Values = {"Cacao", "Dragon Scale", "Leather"},
     Multi = false,
 })
@@ -2501,7 +2501,7 @@ end
 
 if AnDepZai2 then
 local Dropdown = Tabs.item:AddDropdown("DropdownFarm", {
-    Title = "Nguyên Liệu | Sea 2",
+    Title = "Farm Ingredient [ Sea 2 ]",
     Values = {"Mystic Droplet", "Vampire Fang"},
     Multi = false,
 })
