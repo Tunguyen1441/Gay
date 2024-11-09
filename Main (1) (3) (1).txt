@@ -90,7 +90,7 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 
 local Window = Fluent:CreateWindow({
     Title = "Wave Hub",
-    SubTitle = "Free Hub",
+    SubTitle = "Free",
     TabWidth = 110,
     Size = UDim2.fromOffset(480, 320),
     Acrylic = false,
@@ -2442,6 +2442,7 @@ end)
 end
 
 if AnDepZai2 then
+local Hiz = Tabs.Main:AddSection("Farm item")
 local Dropdown = Tabs.Main:AddDropdown("DropdownFarm", {
     Title = "item sea 2",
     Values = {"Mystic Droplet", "Vampire Fang"},
@@ -2786,12 +2787,22 @@ spawn(
     end
 end
 )
-                                    
+                      
+if AnDepZai3 then              
 local Toggle = Tabs.Main:AddToggle("Start Farm", { Title = "Start Farm", Description = "Bắt Đầu Farm", Default = false })
 Toggle:OnChanged(function(Value)
     StartFarm = Value
     StopTween(StartFarm)
 end)
+end
+
+if AnDepZai2 then
+local Toggle = Tabs.Main:AddToggle("Start Farm", { Title = "Start Farm", Description = "Bắt Đầu Farm", Default = false })
+Toggle:OnChanged(function(Value)
+    StartFarm = Value
+    StopTween(StartFarm)
+end)
+end
 
 	
 spawn(function()
