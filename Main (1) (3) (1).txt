@@ -90,7 +90,7 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 
 local Window = Fluent:CreateWindow({
     Title = "Wave Hub",
-    SubTitle = "Free",
+    SubTitle = "Free Hub",
     TabWidth = 110,
     Size = UDim2.fromOffset(480, 320),
     Acrylic = false,
@@ -2426,7 +2426,7 @@ Toggle:OnChanged(function(Value)
     StopTween(_G.AutoFarm)
 end)
 
-if Andepzai3 then
+if AnDepZai3 then
 local Hiz = Tabs.Main:AddSection("Farm item")
 
 local Dropdown = Tabs.Main:AddDropdown("DropdownFarm", {
