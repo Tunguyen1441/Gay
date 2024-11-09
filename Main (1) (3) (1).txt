@@ -1990,7 +1990,7 @@ end)
 local Section = Tabs.Main:AddSection("Main Auto Farm")
 local SelectFastAttackMode = (SelectFastAttackMode or "Super Attack")
 
-SelectedFastAttackMode = {"Low Attack","Fast Attack","Wave Fast"}
+SelectedFastAttackMode = {"Low Attack","Fast Attack","Super Attack","Wave Attack"}
 
 local function ChangeModeFastAttack(SelectFastAttackMode)
 	if SelectFastAttackMode == "Normal Attack" then
@@ -1998,7 +1998,9 @@ local function ChangeModeFastAttack(SelectFastAttackMode)
 	elseif SelectFastAttackMode == "Fast Attack" then
 		FireCooldown = 0.07
 	elseif SelectFastAttackMode == "Super Attack" then
-		FireCooldown = 0.001
+		FireCooldown = 0.00
+		elseif SelectFastAttackMode == "Wave Attack" then
+		FireCooldown = 0.00001
 	end
 end
 
